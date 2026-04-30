@@ -7,86 +7,109 @@
     <title>Abdul Reheem - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="r.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- particles -->
+
+    <!-- ─── Particles ─── -->
     <div class="particles" id="particles"></div>
-    <!-- Scroll dots -->
-    <nav class="scroll-dot" id="scrollDots">
-        <span class="active" onclick="scrollToSec('welcome')"></span>
-        <span onclick="scrollToSec('HOME')"></span>
-        <span onclick="scrollToSec('ABOUT')"></span>
-        <span onclick="scrollToSec('SERVICES')"></span>
-        <span onclick="scrollToSec('PROJECTS')"></span>
-        <span onclick="scrollToSec('CONTACT')"></span>
+
+    <!-- ─── Scroll Dots (desktop only) ─── -->
+    <nav class="scroll-dot" id="scrollDots" aria-label="Section navigation">
+        <span class="active" onclick="scrollToSec('welcome')" title="Welcome"></span>
+        <span onclick="scrollToSec('HOME')" title="Home"></span>
+        <span onclick="scrollToSec('ABOUT')" title="About"></span>
+        <span onclick="scrollToSec('SERVICES')" title="Services"></span>
+        <span onclick="scrollToSec('PROJECTS')" title="Projects"></span>
+        <span onclick="scrollToSec('CONTACT')" title="Contact"></span>
     </nav>
-    <!-- ─── NAVBAR ─── -->
-    <nav class="navbar">
-        <h1 class="nav-brand">Reheem4U</h1>
+
+    <!-- ─── Mobile Nav Overlay ─── -->
+    <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
         <ul>
-            <lI><a href="#HOME">Home</a></lI>
-            <lI><a href="#ABOUT">About</a></lI>
+            <li><a href="#HOME">Home</a></li>
+            <li><a href="#ABOUT">About</a></li>
             <li><a href="#SERVICES">Services</a></li>
             <li><a href="#PROJECTS">Projects</a></li>
-            <lI><a href="#CONTACT">Contact</a></lI>
-
+            <li><a href="#CONTACT">Contact</a></li>
         </ul>
+        <p class="mobile-nav-footer">abdulraheem.pk74@gmail.com</p>
+    </div>
+
+    <!-- ─── NAVBAR ─── -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <h1 class="nav-brand">Reheem4U</h1>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links">
+            <li><a href="#HOME">Home</a></li>
+            <li><a href="#ABOUT">About</a></li>
+            <li><a href="#SERVICES">Services</a></li>
+            <li><a href="#PROJECTS">Projects</a></li>
+            <li><a href="#CONTACT">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Button (mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="mobileNav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
-    <!-- welcome page -->
+    <!-- ─── WELCOME ─── -->
     <section id="welcome">
         <div class="welcome-text">
             <h1>Welcome to my<br><span>Portfolio Website</span></h1>
-            <p>Building modern,reliable,and fast digital experiences with focus on clean UI and solid engineering.</p>
+            <p>Building modern, reliable, and fast digital experiences with focus on clean UI and solid engineering.</p>
             <a href="#HOME" class="cta">Explore My Work <span>→</span></a>
-
         </div>
         <div class="welcome-img">
-            <img src="images/welcome.png" alt="welcome image" width="400px">
+            <img src="images/welcome.png" alt="Welcome illustration">
         </div>
     </section>
 
-
-
     <div class="divider"></div>
-    <!-- home -->
+
+    <!-- ─── HOME ─── -->
     <section id="HOME">
         <div class="home-text">
             <h1>My name is <span>ABDUL-REHIM</span></h1>
             <h2><span>Frontend Developer</span></h2>
-
-            <p>I create beautiful,function,and user-centered digital experiences.I bring ideas to life through clean
-                code and thoughtfuldesign.</p>
-
+            <p>I create beautiful, functional, and user-centered digital experiences. I bring ideas to life through
+                clean code and thoughtful design.</p>
         </div>
         <div class="home-img">
-            <img src="images/home1.jpeg" alt="home image" width="400px">
+            <img src="images/home1.jpeg" alt="Abdul Rehim">
         </div>
     </section>
+
     <div class="divider"></div>
-    <!-- about -->
+
+    <!-- ─── ABOUT ─── -->
     <section id="ABOUT">
         <p class="about-label">✦ Who I Am</p>
-
         <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;margin-bottom:0">
             About Me</h2>
+
         <div class="about-inner">
-
             <div class="about-img-wrap">
-                <img src="images/about.png" alt="about image" width="400px">
+                <img src="images/about.png" alt="About Abdul Rehim">
             </div>
-
-            <div class="content">
+            <div class="about-content">
                 <h1>Hi, I'm <span>Abdul Rehim</span></h1>
-
                 <p>
                     I'm currently a second-year Information Technology student, building a strong foundation in modern
                     web technologies.<br><br>
                     I am a passionate and creative Frontend Developer who loves building modern, responsive, and
                     user-friendly web experiences.
                 </p>
-
                 <div class="skills">
                     <span>HTML5</span>
                     <span>CSS3</span>
@@ -97,13 +120,11 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <div class="divider"></div>
 
     <!-- ─── SERVICES ─── -->
-
     <section id="SERVICES">
         <span class="sec-label">✦ What I Do</span>
         <h2 class="sec-title">My Services</h2>
@@ -113,13 +134,11 @@
                 <h3>Frontend Development</h3>
                 <p>Responsive, fast, and accessible websites using modern frameworks.</p>
             </div>
-
             <div class="srv-card">
                 <span class="srv-icon">⚙️</span>
                 <h3>Backend Development</h3>
                 <p>Secure server-side logic and database management solutions.</p>
             </div>
-
             <div class="srv-card">
                 <span class="srv-icon">💡</span>
                 <h3>Consulting</h3>
@@ -145,53 +164,48 @@
             </div>
             <div class="gallery">
                 <div class="gal-item">
-                    <img src="images/p1.1.png" alt="project image" width="400px">
+                    <img src="images/p1.1.png" alt="ComplaintMS screenshot 1">
                     <div class="gal-overlay"><span>View →</span></div>
                 </div>
-                <div>
-
-                    <img src="images/p1.2.png" alt="project image" width="400px">
+                <div class="gal-item">
+                    <img src="images/p1.2.png" alt="ComplaintMS screenshot 2">
                     <div class="gal-overlay"><span>View →</span></div>
                 </div>
-                <div>
-                    <img src="images/p1.3.png" alt="project image" width="400px">
-                    <div class="gal-overlay"><span>View →</span></div>
-
-                </div>
-                <div>
-                    <img src="images/p1.4.png" alt="project image" width="400px">
+                <div class="gal-item">
+                    <img src="images/p1.3.png" alt="ComplaintMS screenshot 3">
                     <div class="gal-overlay"><span>View →</span></div>
                 </div>
-                <div>
-                    <img src="images/p1.5.png" alt="project image" width="400px">
+                <div class="gal-item">
+                    <img src="images/p1.4.png" alt="ComplaintMS screenshot 4">
+                    <div class="gal-overlay"><span>View →</span></div>
+                </div>
+                <div class="gal-item">
+                    <img src="images/p1.5.png" alt="ComplaintMS screenshot 5">
                     <div class="gal-overlay"><span>View →</span></div>
                 </div>
             </div>
         </div>
-
-
     </section>
+
     <div class="divider"></div>
-    <!-- contact -->
+
+    <!-- ─── CONTACT ─── -->
     <section id="CONTACT">
         <span class="sec-label">✦ Get In Touch</span>
         <h2 class="sec-title">Let's Work Together</h2>
         <div class="contact-inner">
-
             <div class="contact-info">
                 <h2>Ready to start a project?</h2>
                 <p>I am currently available for freelance work. Reach out and let's create something extraordinary.</p>
                 <div class="contact-detail">
                     <span class="icon">📧</span>
-                    <a href="mailto:abdulraheem.pk74@gmail.com" class="btn-main">Send a Message</a>
+                    <a href="mailto:abdulraheem.pk74@gmail.com">abdulraheem.pk74@gmail.com</a>
                 </div>
                 <div class="contact-detail">
                     <span class="icon">📞</span>
                     <a href="tel:+923036294817">+92 303 629 4817</a>
                 </div>
-
             </div>
-
             <div class="contact-form">
                 <form id="contactForm">
                     <div class="form-group">
@@ -203,14 +217,13 @@
                     <div class="form-group">
                         <textarea id="messageInput" placeholder="Your message"></textarea>
                     </div>
-
                     <button class="btn-submit" type="submit">Send Message</button>
                 </form>
             </div>
-
         </div>
     </section>
 
+    <!-- ─── FOOTER ─── -->
     <footer>
         <p class="foot-copy">&copy; 2026 Abdul Rehim. All rights reserved.</p>
         <div class="foot-links">
